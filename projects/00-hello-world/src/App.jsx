@@ -1,16 +1,12 @@
+// import React from "react";
+import "./App.css";
+import { TwitterFollowCard } from "./TwitterFollowCard";
 export function App() {
   return (
-    <article>
-      <header>
-        <img alt="Avatar" src="./src/images/winter.jpg"></img>
-        <div>
-          <strong>Esperanza Gualdron</strong>
-          <span>@EsperanzaGu05</span>
-        </div>
-      </header>
-      <aside>
-        <button>Seguir</button>
-      </aside>
-    </article>
-  );
+    <section className="App">
+      <TwitterFollowCard isFollowing  userName="Esperanza" name="Esperanza Gualdron" />
+      <TwitterFollowCard isFollowing = {false} userName="Andy33" name="Andres Andrade" />
+      <TwitterFollowCard isFollowing  userName="Antonia78" name="Antonia Gualdron" />
+    </section>
+  )
 }
