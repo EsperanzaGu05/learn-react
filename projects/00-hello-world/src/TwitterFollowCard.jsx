@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 import { useState } from "react";
-export function TwitterFollowCard({ userName, children }) {
-  const [isFollowing, setIsFollowing] = useState(false); // destructure 0=false, 1=function to change teh state
+export function TwitterFollowCard({ userName, children, initialIsFollowing }) {
+  const [isFollowing, setIsFollowing] = useState(initialIsFollowing); // destructure 0=false, 1=function to change teh state
   const text = isFollowing ? "Siguiendo" : "Seguir";
   const buttonClassName = isFollowing // To later change the style
     ? "tw-followCard-button is-following"
